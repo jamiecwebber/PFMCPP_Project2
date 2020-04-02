@@ -17,15 +17,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ Boolean
+ Character
+ Integer
+ Floating point
+ Double floating point
+ Valueless
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -66,9 +63,44 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
     
-    
+    bool boolA = true;
+    bool boolB = false;
+    bool boolC = true;
+
+    char charA = 'A';
+    char charB = 'B';
+    char charC = 'C';
+
+    int numberA = 3;
+    int numberB = 37;
+    int numberC = 4137;
+
+    float floatA = 0.2f;
+    float floatB = 0.6736f;
+    float floatC = 4362.f; // can you put the f right after the decimal?
+
+    double doubleA = 0.2;
+    double doubleB = 39972403.3592;
+    double doubleC = 3.14159;
+
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(boolA, boolB, boolC);
+
+    ignoreUnused(charA, charB, charC);
+
+    ignoreUnused(numberA);
+    ignoreUnused(numberB);
+    ignoreUnused(numberC);
+
+    ignoreUnused(floatA);
+    ignoreUnused(floatB);
+    ignoreUnused(floatC);
+
+    ignoreUnused(doubleA);
+    ignoreUnused(doubleB);
+    ignoreUnused(doubleC);
+
 }
 /*
  10 functions
@@ -83,42 +115,97 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+char capitalize(char lowerCaseChar)
+{
+  ignoreUnused(lowerCaseChar);
+  return {};
+}
 
 /*
  2)
  */
+int calculateFibonacci(int firstNumber = 0, int secondNumber = 1)
+{
+  ignoreUnused(firstNumber, secondNumber);
+  return {};
+}
 
 /*
  3)
  */
+int countDigits(int number)
+{
+  ignoreUnused(number);
+  return {};
+}
+
 
 /*
  4)
  */
 
+void prepareForPlayback()
+{
+}
+
 /*
  5)
  */
+
+float reduceDoubleToFloat(double doubleToReduce)
+{
+  ignoreUnused(doubleToReduce);
+  return {};
+}
 
 /*
  6)
  */
 
+float calculateCombinationTone(float freq1, float freq2, int factor1 = 1, int factor2 = 2)
+{
+  ignoreUnused(freq1, freq2, factor1, factor2);
+  return {};
+}
+
 /*
  7)
  */
+
+int roundUp(float numberToRound)
+{
+  ignoreUnused(numberToRound);
+  return {};
+}
 
 /*
  8)
  */
 
+float calculateFeedback(float input, float roomSize = 1.0f, float damping = 0.5f)
+{
+  ignoreUnused(input, roomSize, damping);
+  return {};
+}
+
 /*
  9)
  */
 
+void performSpeakerTest(int speakerNumber = 1, float gain = 1)
+{
+  ignoreUnused(speakerNumber, gain);
+}
+
 /*
  10)
  */
+int charToInt(char charToConvert)
+{
+  ignoreUnused(charToConvert);
+  return {};
+}
+
 
 int main()
 {
@@ -126,27 +213,36 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto capital = capitalize('a');
     
     //2)
-    
+    auto fib = calculateFibonacci(2, 3);
+
     //3)
-    
+    auto digits = countDigits(12345);
+
     //4)
+    prepareForPlayback();
     
     //5)
-    
+    auto reducedFloat = reduceDoubleToFloat(6.66453);
+
     //6)
+    auto combinationToneFreq = calculateCombinationTone(450.0f, 500.0f);
     
     //7)
-    
+    auto roundedNumber = roundUp(654.3972f);
     //8)
+
+    auto feedback = calculateFeedback(0.678f, 0.5f, 0.7f);
     
     //9)
-    
+    performSpeakerTest(2, 0.5f);
+
     //10)
+    auto charNumber = charToInt('z');
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, capital, fib, digits, reducedFloat, combinationToneFreq, roundedNumber, feedback, charNumber);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
