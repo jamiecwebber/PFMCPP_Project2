@@ -82,25 +82,10 @@ void variableDeclarations()
     double doubleA = 0.2;
     double doubleB = 39972403.3592;
     double doubleC = 3.14159;
-
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(boolA, boolB, boolC);
-
-    ignoreUnused(charA, charB, charC);
-
-    ignoreUnused(numberA);
-    ignoreUnused(numberB);
-    ignoreUnused(numberC);
-
-    ignoreUnused(floatA);
-    ignoreUnused(floatB);
-    ignoreUnused(floatC);
-
-    ignoreUnused(doubleA);
-    ignoreUnused(doubleB);
-    ignoreUnused(doubleC);
-
+    ignoreUnused(boolA, boolB, boolC, charA, charB, charC, numberA, numberB, numberC,             floatA, floatB, floatC, doubleA, doubleB, doubleC);
+            // is this the correct formatting if I want to break up a long line?
 }
 /*
  10 functions
@@ -117,8 +102,8 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 char capitalize(char lowerCaseChar)
 {
-  ignoreUnused(lowerCaseChar);
-  return {};
+    ignoreUnused(lowerCaseChar);
+    return {};
 }
 
 /*
@@ -126,8 +111,8 @@ char capitalize(char lowerCaseChar)
  */
 int calculateFibonacci(int firstNumber = 0, int secondNumber = 1)
 {
-  ignoreUnused(firstNumber, secondNumber);
-  return {};
+    ignoreUnused(firstNumber, secondNumber);
+    return {};
 }
 
 /*
@@ -135,8 +120,8 @@ int calculateFibonacci(int firstNumber = 0, int secondNumber = 1)
  */
 int countDigits(int number)
 {
-  ignoreUnused(number);
-  return {};
+    ignoreUnused(number);
+    return {};
 }
 
 
@@ -144,8 +129,9 @@ int countDigits(int number)
  4)
  */
 
-void prepareForPlayback()
+void prepareForPlayback(bool isPlaying = false)
 {
+    ignoreUnused(isPlaying);
 }
 
 /*
@@ -154,8 +140,8 @@ void prepareForPlayback()
 
 float reduceDoubleToFloat(double doubleToReduce)
 {
-  ignoreUnused(doubleToReduce);
-  return {};
+    ignoreUnused(doubleToReduce);
+    return {};
 }
 
 /*
@@ -164,8 +150,8 @@ float reduceDoubleToFloat(double doubleToReduce)
 
 float calculateCombinationTone(float freq1, float freq2, int factor1 = 1, int factor2 = 2)
 {
-  ignoreUnused(freq1, freq2, factor1, factor2);
-  return {};
+    ignoreUnused(freq1, freq2, factor1, factor2);
+    return {};
 }
 
 /*
@@ -174,8 +160,8 @@ float calculateCombinationTone(float freq1, float freq2, int factor1 = 1, int fa
 
 int roundUp(float numberToRound)
 {
-  ignoreUnused(numberToRound);
-  return {};
+    ignoreUnused(numberToRound);
+    return {};
 }
 
 /*
@@ -184,8 +170,8 @@ int roundUp(float numberToRound)
 
 float calculateFeedback(float input, float roomSize = 1.0f, float damping = 0.5f)
 {
-  ignoreUnused(input, roomSize, damping);
-  return {};
+    ignoreUnused(input, roomSize, damping);
+    return {};
 }
 
 /*
@@ -194,7 +180,7 @@ float calculateFeedback(float input, float roomSize = 1.0f, float damping = 0.5f
 
 void performSpeakerTest(int speakerNumber = 1, float gain = 1)
 {
-  ignoreUnused(speakerNumber, gain);
+    ignoreUnused(speakerNumber, gain);
 }
 
 /*
@@ -202,8 +188,8 @@ void performSpeakerTest(int speakerNumber = 1, float gain = 1)
  */
 int charToInt(char charToConvert)
 {
-  ignoreUnused(charToConvert);
-  return {};
+    ignoreUnused(charToConvert);
+    return {};
 }
 
 
